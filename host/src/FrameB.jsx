@@ -1,29 +1,28 @@
-import './FrameA.css';
-import useCount from './store';
+import PropTypes from 'prop-types';
 
-export const FrameB = ({ src, style, ...props }) => {
-  const [state, setState] = useCount();
-
+const FrameB = ({ src, style, ...props }) => {
   return (
     <div>
-      <h1>Check out the Blinkist app</h1>
+      <h1>Check out the Blinkist App</h1>
       <h2>Variant B</h2>
       <img
         src={src}
         style={{
           ...style,
           padding: '1em',
-          border: '5px solid blue',
+          border: '5px dashed blue',
         }}
         {...props}
       ></img>
       <p>Meet the app that revolutionized reading.</p>
       <p>Meet the app that has 18 million users.</p>
-      <button className="shared-btn" onClick={() => setState((n) => n + 1)}>
-        SIGN UP: {state}
-      </button>
     </div>
   );
+};
+
+FrameB.propTypes = {
+  src: PropTypes.string,
+  style: PropTypes.string,
 };
 
 export default FrameB;

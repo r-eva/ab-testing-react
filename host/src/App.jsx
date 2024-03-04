@@ -1,17 +1,23 @@
+import React from 'react';
 import './App.css';
-import FrameA from 'remoteApp/FrameA';
-import useStore from 'remoteApp/store';
+
+import VariantChooser from 'abManager/VariantChooser';
+
+const FrameA = React.lazy(() => import('home/FrameA'));
+const FrameB = React.lazy(() => import('home/FrameB'));
 
 function App() {
-  const [count, setCount] = useStore(0);
-
   return (
-    <div className="App">
-      <h1>Host Application</h1>
-      <FrameA></FrameA>
-      <div className="card">
-        <button onClick={() => setCount((n) => n + 1)}>count is {count}</button>
-      </div>
+    <div className="App" style={{ width: 800, margin: 'auto' }}>
+      <VariantChooser
+        test="test1"
+        variations={{
+          a: FrameA,
+          b: FrameB,
+        }}
+        src="https://placedog.net/640/480?id=53"
+        style={{ width: 640, height: 480 }}
+      />
     </div>
   );
 }

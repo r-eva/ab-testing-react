@@ -6,10 +6,14 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'remote_app',
+      name: 'abManager',
       filename: 'remoteEntry.js',
+      remotes: {
+        abManager: 'http://localhost:5001/assets/remoteEntry.js',
+      },
       exposes: {
-        './FrameA': './src/FrameA',
+        './VariantChooser': './src/VariantChooser',
+        './tests': './src/tests',
         './store': './src/store',
       },
       shared: ['react', 'react-dom', 'jotai'],

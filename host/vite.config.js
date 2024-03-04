@@ -6,9 +6,15 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'app',
+      name: 'home',
+      filename: 'remoteEntry.js',
       remotes: {
-        remoteApp: 'http://localhost:5001/assets/remoteEntry.js',
+        home: 'http://localhost:4173/assets/remoteEntry.js',
+        abManager: 'http://localhost:5001/assets/remoteEntry.js',
+      },
+      exposes: {
+        './FrameA': './src/FrameA',
+        './FrameB': './src/FrameB',
       },
       shared: ['react', 'react-dom'],
     }),
