@@ -14,7 +14,7 @@ export default defineConfig({
       exposes: {
         './VariantChooser': './src/VariantChooser',
         './tests': './src/tests',
-        './store': './src/store',
+        './HandleVariantClick': './src/handle-variant-click',
         './VariantA': './src/variations/FrameA',
         './VariantB': './src/variations/FrameB',
       },

@@ -5,8 +5,9 @@ import FrameB from './variations/FrameB';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FrameA />
-    <FrameB />
+    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+      <FrameA />
+      <FrameB />
+    </div>
   </React.StrictMode>
 );
-

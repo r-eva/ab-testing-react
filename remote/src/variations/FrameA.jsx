@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { data } from '../testing-data/data.json';
 
-const variantData = data.find(e => e.variant === "a")
+const variantData = data.find((e) => e.variant === 'a');
 
 const FrameA = () => {
   return (
@@ -12,6 +12,8 @@ const FrameA = () => {
         style={{
           padding: '1em',
           border: '5px solid green',
+          width: '30rem',
+          height: '30rem',
         }}
       ></img>
       <h2>{variantData.summary}</h2>

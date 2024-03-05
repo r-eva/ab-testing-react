@@ -2,11 +2,18 @@ import React from 'react';
 import './App.css';
 
 import VariantChooser from 'abManager/VariantChooser';
+import HandleVariantClick from 'abManager/HandleVariantClick';
 
 const FrameA = React.lazy(() => import('abManager/VariantA'));
 const FrameB = React.lazy(() => import('abManager/VariantB'));
 
 function App() {
+  const handleButtonClick = () => {
+    // track A/B Testing Click
+    HandleVariantClick();
+
+    // Do other thing required for the application
+  };
   return (
     <div className="App" style={{ width: 800, margin: 'auto' }}>
       <VariantChooser
@@ -15,9 +22,8 @@ function App() {
           a: FrameA,
           b: FrameB,
         }}
-        src="https://placedog.net/640/480?id=53"
-        style={{ width: 640, height: 480 }}
       />
+      <button onClick={handleButtonClick}>SIGN UP</button>
     </div>
   );
 }

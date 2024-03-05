@@ -12,6 +12,8 @@ const FrameB = () => {
         style={{
           padding: '1em',
           border: '5px dashed blue',
+          width: '30rem',
+          height: '30rem',
         }}
       ></img>
       <h2>{variantData.summary}</h2>
@@ -21,7 +23,7 @@ const FrameB = () => {
 };
 
 FrameB.propTypes = {
-  src: PropTypes.string
+  src: PropTypes.string,
 };
 
 export default FrameB;
