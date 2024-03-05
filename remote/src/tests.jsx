@@ -1,3 +1,7 @@
-export default {
-  test1: ['a', 'b'],
+import { data } from './testing-data/data.json'
+
+let testData = {
+  testLandingPage: data,
 };
+
+export default testData

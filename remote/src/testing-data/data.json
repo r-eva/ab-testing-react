@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "variant": "a",
+      "headline": "Check out the Blinkist app",
+      "imageURL": "https://source.unsplash.com/collection/928423/480x480",
+      "summary": "Meet the app that revolutionized reading.",
+      "description": "Meet the app that has 18 million users.",
+      "callToAction": "Thanks a lot for reading the article!",
+      "clickButton": "SIGN UP"
+    },
+    {
+      "variant": "b",
+      "headline": "Explore the Blinkist app.",
+      "imageURL": "https://source.unsplash.com/collection/928423/480x480",
+      "summary": "Introducing the app that transformed the way we read.",
+      "description": "Encounter the app boasting 18 million users.",
+      "callToAction": "Thank you for your readership!",
+      "clickButton": "SIGN UP"
+    }
+  ]
+}

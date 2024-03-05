@@ -1,11 +1,11 @@
-export const trackPageview = (params) => {
-  // need to count how many pageview
-  console.log(`--> Tracking Pageview: ${params}`);
+export const trackPageview = (viewedVariant, userIP) => {
+  console.log(`--> Vieved Variant: ${viewedVariant}`);
+  console.log(`--> User IP: ${userIP}`);
 };
 
-export const trackEvent = (params) => {
-  // need to prevent calling api analytic to the company if the user api already tracked
-  console.log(`--> Tracking Event: ${params}`);
+export const trackEvent = (eventName, userIP, selectedVariant) => {
+  console.log(`--> Event Name (for example, user clicking signup link): ${eventName}`);
+  console.log(`--> UserIp: ${userIP}`);
+  console.log(`--> Selected variant: ${selectedVariant}`);
 };
 
-/// final function to show CTR (click-through rate) => NUMBER OF PAGEVIEW / NUMBER OF CLICK

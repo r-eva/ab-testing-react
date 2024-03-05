@@ -3,14 +3,14 @@ import './App.css';
 
 import VariantChooser from 'abManager/VariantChooser';
 
-const FrameA = React.lazy(() => import('home/FrameA'));
-const FrameB = React.lazy(() => import('home/FrameB'));
+const FrameA = React.lazy(() => import('abManager/VariantA'));
+const FrameB = React.lazy(() => import('abManager/VariantB'));
 
 function App() {
   return (
     <div className="App" style={{ width: 800, margin: 'auto' }}>
       <VariantChooser
-        test="test1"
+        test="testLandingPage"
         variations={{
           a: FrameA,
           b: FrameB,

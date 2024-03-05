@@ -15,6 +15,8 @@ export default defineConfig({
         './VariantChooser': './src/VariantChooser',
         './tests': './src/tests',
         './store': './src/store',
+        './VariantA': './src/variations/FrameA',
+        './VariantB': './src/variations/FrameB',
       },
       shared: ['react', 'react-dom', 'jotai'],
     }),

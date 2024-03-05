@@ -6,12 +6,13 @@ import tests from 'abManager/tests';
 
 const VariantChooser = ({ test, variations, ...props }) => {
   let [selectedVariant] = React.useState(
-    tests[test][Math.floor(Math.random() * tests[test].length)]
+    tests[test][Math.floor(Math.random() * tests[test].length)].variant
   );
 
   const storedUserData = localStorage.getItem('userVariant');
 
   if (storedUserData) {
+    // selected variant can be change on opening new tab ? The assigned variation doesn’t change after the page reloads meaning reloads, refresh and opening new page
     selectedVariant = storedUserData;
   } else {
     fetch('https://api.ipify.org?format=json')
@@ -21,7 +22,7 @@ const VariantChooser = ({ test, variations, ...props }) => {
         localStorage.setItem('userIP', data.ip);
         localStorage.setItem('userVariant', selectedVariant);
         localStorage.setItem('userSignUp', 'false');
-        trackPageview(selectedVariant);
+        trackPageview(selectedVariant, data.ip);
       })
       .catch((error) => {
         console.log('Error:', error);
@@ -33,7 +34,8 @@ const VariantChooser = ({ test, variations, ...props }) => {
   const handleSignUpClick = async () => {
     if (localStorage.getItem('userSignUp') === 'false') {
       await localStorage.setItem('userSignUp', 'true');
-      trackEvent(`user signup on variant ${selectedVariant}`);
+      let userIp = localStorage.getItem('userIP');
+      trackEvent(`User clicked sign up page`, userIp ,selectedVariant);
     }
   };
 

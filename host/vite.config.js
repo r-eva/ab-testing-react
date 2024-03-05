@@ -9,12 +9,7 @@ export default defineConfig({
       name: 'home',
       filename: 'remoteEntry.js',
       remotes: {
-        home: 'http://localhost:4173/assets/remoteEntry.js',
         abManager: 'http://localhost:5001/assets/remoteEntry.js',
-      },
-      exposes: {
-        './FrameA': './src/FrameA',
-        './FrameB': './src/FrameB',
       },
       shared: ['react', 'react-dom'],
     }),
