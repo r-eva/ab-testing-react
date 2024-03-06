@@ -96,17 +96,6 @@ To run this project in production environment do the following:
    pnpm build && pnpm preview
    ```
 
-To run this project in development environment of the application, do the following:
-
-1. Run Build and Serve in remote directory (test services)
-   ```sh
-   pnpm build && pnpm serve
-   ```
-2. Run Development in host directory (main app)
-   ```sh
-   pnpm dev
-   ```
-
 To see the variant, editing json data of variation in the test Service with Hot Reloading, do the following:
 
 - Run Development in remote directory (test services)
