@@ -16,10 +16,10 @@ const VariantChooser = ({ test, variations, ...props }) => {
     selectedVariant = storedUserVariant;
     trackPageview(selectedVariant, storedUserInfo);
   } else {
+    //creation dummy api
     fetch('https://api.ipify.org?format=json')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.ip);
         localStorage.setItem('userIP', data.ip);
         localStorage.setItem('userVariant', selectedVariant);
         localStorage.setItem('userSignUp', 'false');
