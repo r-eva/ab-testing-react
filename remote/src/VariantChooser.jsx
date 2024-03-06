@@ -9,10 +9,12 @@ const VariantChooser = ({ test, variations, ...props }) => {
     tests[test][Math.floor(Math.random() * tests[test].length)].variant
   );
 
-  const storedUserData = localStorage.getItem('userVariant');
+  const storedUserVariant = localStorage.getItem('userVariant');
+  const storedUserInfo = localStorage.getItem('userIP');
 
-  if (storedUserData) {
-    selectedVariant = storedUserData;
+  if (storedUserVariant) {
+    selectedVariant = storedUserVariant;
+    trackPageview(selectedVariant, storedUserInfo);
   } else {
     fetch('https://api.ipify.org?format=json')
       .then((response) => response.json())

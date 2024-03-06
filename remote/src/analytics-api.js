@@ -4,8 +4,7 @@ export const trackPageview = (viewedVariant, userIP) => {
 };
 
 export const trackEvent = (eventName, userIP, selectedVariant) => {
-  console.log(`--> Event Name (for example, user clicking signup link): ${eventName}`);
+  console.log(`--> Event Name: ${eventName}`);
   console.log(`--> UserIp: ${userIP}`);
   console.log(`--> Selected variant: ${selectedVariant}`);
 };
-
