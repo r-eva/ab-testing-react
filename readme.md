@@ -28,7 +28,7 @@
 
 This is one solution to create A/B Testing in Microfrontend using Vite and Module. The project separated into 2 application, one is called host (main application) and the other called remote (test services).
 
-The goal of this project are to simulate the following:
+The goal of this project is to simulate the following:
 
 - Visitor sees only one variation (assigned randomly) when they land on the application page.
 - The assigned variation doesn’t change after the application page reloads.
@@ -108,6 +108,8 @@ To run this project in development environment do the following:
    ```
 
 Please take notes that you might see in development environment, the app is sending 2 times pageview. This is because of the React.StrictMode in the main.jsx. This strict mode only renders twice in development mode. So the extra API requests would only happen in development mode. Not in production (as you may check on pnpm preview).
+
+You may hide this behavior on your chrome by installing React Developer Tools, go to Components, click setting icon, go to debugging and click hide logs during second render in Strict Mode. Please see in this article https://stackoverflow.com/questions/75608203what-is-chrome-extension-installhook-js-that-is-being-downloaded-for-my-pages
 
 To see the variant, editing json data of variation in the test Service with Hot Reloading, do the following:
 
