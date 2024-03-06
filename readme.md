@@ -18,7 +18,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -45,8 +44,8 @@ The goal of this project are to simulate the following:
 ### Built With
 
 - [![React][React.js]][React-url]
-- [![Module Federation][Module-federation.com]][Laravel-url]
-- [![Vite][Vite.js]][Bootstrap-url]
+- [![Module Federation][Module-federation]][Webpack-url]
+- [![Vite][Vitejs.dev]][Vite-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,11 +109,10 @@ To run this project in development environment of the application, do the follow
 
 To see the variant, editing json data of variation in the test Service with Hot Reloading, do the following:
 
-Run Development in remote directory (test services)
-
-```sh
-pnpm dev
-```
+- Run Development in remote directory (test services)
+  ```sh
+  pnpm dev
+  ```
 
 You may observe on how the application track the user data by going into the application console.
 In general, the test service is running on port: http://localhost:5001/; while the application run in port: http://localhost:4173/
@@ -133,7 +131,7 @@ Regina Eva - hello@reginaeva.de / career@reginaeva.de
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Module-federation]: https://webpack.js.org/site-logo.c0e60df418e04f58.svg
+[Module-federation]: https://img.icons8.com/?size=48&id=sOWbK4N3cxGh&format=png
 [Webpack-url]: https://webpack.js.org/concepts/module-federation/
-[Vitejs.dev]: https://vitejs.dev/
+[Vitejs.dev]: https://vitejs.dev/viteconf.svg
 [Vite-url]: https://vitejs.dev/
