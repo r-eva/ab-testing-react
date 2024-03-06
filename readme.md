@@ -96,6 +96,19 @@ To run this project in production environment do the following:
    pnpm build && pnpm preview
    ```
 
+To run this project in development environment do the following:
+
+1. Run Build and Serve in remote directory (test services)
+   ```sh
+   pnpm build && pnpm serve
+   ```
+2. Run Build and Preview in host directory (main app)
+   ```sh
+   pnpm build && pnpm dev
+   ```
+
+Please take notes that you might see in development environment, the app is sending 2 times pageview. This is because of the React.StrictMode in the main.jsx. This strict mode only renders twice in development mode. So the extra API requests would only happen in development mode. Not in production (as you may check on pnpm preview).
+
 To see the variant, editing json data of variation in the test Service with Hot Reloading, do the following:
 
 - Run Development in remote directory (test services)

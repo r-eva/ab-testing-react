@@ -5,7 +5,7 @@ const HandleVariantClick = async () => {
     await localStorage.setItem('userSignUp', 'true');
     let userIp = localStorage.getItem('userIP');
     let selectedVariant = localStorage.getItem('userVariant');
-    trackEvent(`User clicked sign up page`, userIp, selectedVariant);
+    trackEvent(`User clicked sign up button`, userIp, selectedVariant);
   }
 };
 
